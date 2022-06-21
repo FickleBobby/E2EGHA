@@ -10,6 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: cypress-io/github-action@v3
         with:
+          record: true
           browser: chrome
           build: npm run build
           start: npm start
