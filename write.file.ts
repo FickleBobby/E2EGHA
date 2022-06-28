@@ -1,6 +1,9 @@
 const fs = require("fs");
+const path = require("path");
 
-fs.writeFile("./src/assets/mytest.js", "//Hello world", (err) => {
+let target = path.join(__dirname, "src/assets/mytest.js")
+console.log("TARGET: " + target);
+fs.writeFile(target, "//Hello world", (err) => {
     if(err) {
         console.log(err)
         return;
