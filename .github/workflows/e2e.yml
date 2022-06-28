@@ -18,8 +18,9 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build:init && npm run build
-        
+
   cypress-run:
+    needs: build
     runs-on: ubuntu-20.04
     # Cypress Docker image with Chrome v78
     # and Firefox v70 pre-installed
