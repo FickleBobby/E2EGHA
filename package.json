@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run build:init && ng build",
+    "build:init": "node write.file.ts",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "cypress": "cypress run --browser chrome"

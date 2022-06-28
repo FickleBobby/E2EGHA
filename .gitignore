@@ -41,6 +41,7 @@ testem.log
 /cypress/videos
 /cypress/reports
 /cypress/results
+mytest.js
 
 # System files
 .DS_Store
