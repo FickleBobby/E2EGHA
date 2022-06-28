@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "npm run build:init && ng build",
+    "build": "node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng build",
     "build:init": "node write.file.ts",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
