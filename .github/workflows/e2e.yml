@@ -1,5 +1,6 @@
 name: E2E in custom container
-on: [push]
+on:
+  workflow_dispatch:
 jobs:
   build:
     name: Build
