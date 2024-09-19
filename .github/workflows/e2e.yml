@@ -20,6 +20,23 @@ jobs:
       - name: Build
         run: npm run build:init && npm run build
 
+  protractor-run:
+    needs: build
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: npm
+      - name: Pull down dependencies
+        run: npm install
+      - name: E2E
+        run: npm run e2e
+        
   cypress-run:
     needs: build
     runs-on: ubuntu-20.04
